@@ -1,0 +1,35 @@
+.reviewsection{
+    padding: 50px;
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.testimonials{
+    padding-bottom: 50px;
+}
+
+.testimonials-text{
+    color: #00b997;
+    font-size: 23px;
+    padding: 5px;
+}
+
+.circle-image{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 20px;
+}
+
+.card-zoom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: box-shadow 0.3 ease;
+
+    &:hover{
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+}

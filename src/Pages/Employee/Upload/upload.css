@@ -1,0 +1,23 @@
+.upload-box{
+    box-shadow: 0 0 10px rgba(26, 24, 24, 0.1);
+    margin: 50px;
+    padding: 20px;
+    padding-top: 50px;
+    width: 50%;
+}
+
+.fileUploadButton{
+    width: auto;
+}
+
+@media (max-width:768px) {
+    .upload-box{
+        margin: 25px;
+        width: auto;
+    }
+
+    .fileUploadButton{
+        width: 50%;
+    }
+    
+}

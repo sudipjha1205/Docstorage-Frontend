@@ -1,0 +1,109 @@
+.main-body{
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .signin-page {
+    margin: 50px auto;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-pills-style .nav-link-style {
+    border-radius: 5px;
+    color: #fff;
+    background-color: #3498db;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  .nav-pills-style .nav-link-style:hover {
+    background-color: #2980b9;
+  }
+
+  .tab-content {
+    margin-top: 20px;
+  }
+
+  .tab-pane {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-style {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .label-style {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .input-style {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3 ease;
+    
+
+    &:hover{
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+  .password-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+
+  .button-style {
+    background-color: #00b997;
+    text-align: center;
+    display: block;
+    margin: 10px auto; /* Center the button horizontally with some top margin */
+    margin-top: 25px;
+    font-size: 20px;
+    height: 45px;
+    width: 110px;
+    background-color: #00B997;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    color: beige;
+    transition: all 220ms ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .password-button-style {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-bottom: 15px;
+    padding-left: 20px ;
+  }
+
+  .button-style:hover {
+    background-color: transparent;
+    border: 2px solid #00B997;
+    color: #00B997;
+  }
+
+  .pass-instruction{
+    display: block;
+    margin-bottom: 45px;
+    font-size: 15px;
+  }
