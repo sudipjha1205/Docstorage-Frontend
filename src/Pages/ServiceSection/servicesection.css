@@ -1,0 +1,14 @@
+.servicesection{
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.service-name{
+    text-align: center;
+}
+
+.service-heading{
+    text-align: center;
+    padding: 50px;
+}
