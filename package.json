@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://sudipjha1205.github.io/",
   "dependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -41,21 +40,7 @@
       "last 1 safari version"
     ]
   },
-  "engines": {
-    "node": ">=12"
-  },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@babel/plugin-transform-private-property-in-object": "^7.23.4",
     "gh-pages": "^6.1.1"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-private-property-in-object"
-    ]
   }
 }
