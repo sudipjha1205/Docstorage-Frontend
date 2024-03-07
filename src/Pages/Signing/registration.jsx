@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useNavigate,Redirect } from 'react-router-dom';
+import { backend_url } from "../../Components/configurations";
+
 import "./login.css"; // Ensure that your CSS file is correctly linked
 import show from "../../Illustrations/show.png";
 import hide from "../../Illustrations/hide.png";
@@ -22,7 +24,7 @@ const Registration = () => {
     // Fetch CSRF token from the server
     const fetchCsrfToken = async () => {
       try {
-        const response = await axios.get('https://docstorage-server-e48dce0ce08a.herokuapp.com/user/csrf_token/');
+        const response = await axios.get(`${backend_url}user/csrf_token/`);
         setCsrfToken(response.data.csrfToken);
       } catch (error) {
         console.error('Failed to fetch CSRF token', error);
@@ -89,7 +91,7 @@ const Registration = () => {
       console.log('Form Data:', formData);
       console.log('Headers:', headers);
 
-      const response = await fetch('https://docstorage-server-e48dce0ce08a.herokuapp.com/user/registration/', {
+      const response = await fetch(`${backend_url}user/registration/`, {
         method: 'post',
         headers: headers,
         body: JSON.stringify(formData),

@@ -10,14 +10,16 @@ export const AuthProvider = ({ children }) => {
     return localStorage.getItem('isAuthenticated') === 'true';
   });
 
-  const login = () => {
+  const login = (email) => {
     setAuthenticated(true);
     localStorage.setItem('isAuthenticated', 'true');
+    localStorage.setItem('user', email);
   };
 
   const logout = () => {
     setAuthenticated(false);
     localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('user');
   };
 
   // Use useEffect to check the authentication state on component mount

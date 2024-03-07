@@ -1,5 +1,6 @@
 import React, { useState,useRef } from 'react';
 import axios from 'axios';
+import { backend_url } from '../../../Components/configurations';
 
 import './upload.css';
 
@@ -60,7 +61,7 @@ const FileUploadForm = () => {
             formData.append('consumerNo', textValue);
 
             try {
-                const response = await axios.post('http://127.0.0.1:8000/user/upload-pdf/', formData, {
+                const response = await axios.post(`${backend_url}user/upload-pdf/`, formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
                     },
@@ -101,8 +102,8 @@ const FileUploadForm = () => {
             <h3 className='d-flex justify-content-center pb-5 fw-light'>Upload Consumer's Documents</h3>
             <div className="file-upload-form text-center">
                 <div className="form-group d-flex justify-content-center align-items-center">
-                    <label htmlFor="text-input" className='p-2 w-5'>Consumer No:</label>
-                    <input type="text" id="text-input" className="form-control w-50" value={textValue} onChange={handleTextChange} onKeyDown={handleKeyDown}/>
+                    <label htmlFor="upload-pdf-text-input" className='p-2 w-5'>Consumer No:</label>
+                    <input type="text" id="upload-pdf-text-input" className="form-control w-50" value={textValue} onChange={handleTextChange} onKeyDown={handleKeyDown}/>
                 </div>
                 <div className="form-group d-flex justify-content-center align-items-center p-4">
                     <label htmlFor="file-input" className='p-2 w-5 d-flex justify-content-start'>Upload File:</label>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Components/Authentication/AuthContext";
+import { backend_url } from "../../Components/configurations";
 
 import "./login.css"; // Ensure that your CSS file is correctly linked
 import show from "../../Illustrations/show.png";
@@ -52,7 +53,7 @@ const Login = () => {
       console.log('Form Data:', formData);
       console.log('Headers:', headers);
 
-      const response = await fetch('https://docstorage-server-e48dce0ce08a.herokuapp.com/user/login/', {
+      const response = await fetch(`${backend_url}user/login/`, {
         method: 'post',
         headers: headers,
         body: JSON.stringify(formData),
@@ -67,13 +68,14 @@ const Login = () => {
         return
       }
 
+      login(formData.email);
+
       const access_token = data['access_token']
       const refresh_token = data['refresh_token']
       localStorage.setItem('access_token', access_token);
       localStorage.setItem('refresh_token', refresh_token);
 
       navigate("/Employee/homepage");
-      login();
       
     } catch (error) {
       console.error('Registration failed', error);

@@ -5,8 +5,10 @@ import { useAuth } from '../../../Components/Authentication/AuthContext';
 import Navbar from '../../../Components/Navbar/Navbar';
 import Footer from '../../Footer/Footer';
 import Upload from '../Upload/upload';
+import UploadFileToS3 from '../Upload/upload_s3';
 import Analytics from '../Analytics/Analytics';
 import GetConsumerData from '../GetConsumerData/GetConsumerData';
+import GetConsumerDataFromS3 from '../GetConsumerData/GetConsumerDataFromS3';
 import './EmpHomepage.css';
 
 const Homepage = () => {
@@ -27,8 +29,8 @@ const Homepage = () => {
                         </li>
                     </ul>
                     <div class="tab-content tab-content-style" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"><div class=' d-flex justify-content-center align-items-center'><Upload /></div></div>
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0"><div class=' d-flex justify-content-center align-items-center'><GetConsumerData /></div></div>
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"><div class=' d-flex justify-content-center align-items-center'><UploadFileToS3 /></div></div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0"><div class=' d-flex justify-content-center align-items-center'><GetConsumerDataFromS3 /></div></div>
                         <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0"><div class=' d-flex justify-content-center align-items-center'><Analytics /></div></div>
                     </div>
                 </div>
