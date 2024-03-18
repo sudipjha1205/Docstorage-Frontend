@@ -75,7 +75,7 @@ const Login = () => {
       localStorage.setItem('access_token', access_token);
       localStorage.setItem('refresh_token', refresh_token);
 
-      navigate("/Employee/homepage");
+      navigate("/Employee/Data");
       
     } catch (error) {
       console.error('Registration failed', error);

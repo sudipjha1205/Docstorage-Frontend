@@ -6,7 +6,7 @@ import Services from './Pages/ServiceSection/serviceSection';
 import Signin from './Pages/Signing/sign_in';
 import Registration from './Pages/Signing/registration';
 import Login from './Pages/Signing/login';
-import Homepage from './Pages/Employee/Homepage/Homepage';
+import Data from './Pages/Employee/Data/Data'
 import NotFound from '../src/Components/NotFound/NotFound';
 import NotAuthorized from './Components/NotAuthorized/NotAuthorized';
 
@@ -25,8 +25,8 @@ const AppRoutes = () => {
       <Route path="/services" element={<Services />} />
       <Route path="/signin" element={<Signin />} />
       <Route
-        path='Employee/Homepage'
-        element={isAuthenticated ? <Homepage /> : <NotAuthorized />}
+        path='Employee/Data'
+        element={isAuthenticated ? <Data /> : <NotAuthorized />}
       />
       {/* 404 Not Found Page */}
       <Route path='*' element={<NotFound />} />
