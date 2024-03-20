@@ -81,9 +81,6 @@ const Update = () => {
                     alert("PDF Updated successfully");
                     clearInputs();
                     console.log('PDF updated successfully');
-                } else if(response.status === 403){
-                    alert("Consumer Number is already present");
-                    clearInputs();
                 } else {
                     console.error('Failed to upload PDF');
                     clearInputs();

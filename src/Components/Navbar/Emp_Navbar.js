@@ -58,10 +58,10 @@ const Emp_Navbar = () => {
               <a className="nav-link" href="/" style={{ color: 'beige' }}>Home</a>
             </li>
             <li className="nav-item nav-item-style">
-              <a className="nav-link" href="#" style={{ color: 'beige' }}>Data</a>
+              <a className="nav-link" href="/Employee/Data" style={{ color: 'beige' }}>Data</a>
             </li>
             <li className="nav-item nav-item-style">
-              <a className="nav-link" href="#" style={{ color: 'beige' }}>History</a>
+              <a className="nav-link" href="/User/History" style={{ color: 'beige' }}>History</a>
             </li>
             <li className="nav-item nav-item-style">
               <a className="nav-link" href="#" style={{ color: 'beige' }}>Contact</a>

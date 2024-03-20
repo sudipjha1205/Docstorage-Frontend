@@ -1,0 +1,119 @@
+.container-style{
+    margin-top: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 40px;
+}
+.table-style {
+    overflow-x: auto;
+    padding-top: 30px;
+    border-radius: 5px;
+}
+
+.table-style tr th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+}
+
+.row{
+    position: relative;
+}
+
+
+.search-bar{
+    position: relative;
+}
+
+.white-line{
+    color: aliceblue;
+}
+
+.button-hover{
+    background-color: #d4d3d2;
+    height: 43px;
+    width: 43px;
+    text-align: center;
+    display: block;
+    padding: 4px 4px; /* Add padding for better touch interaction on mobile */
+    font-size: 17px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    transition: all 220ms ease-in-out;
+    cursor: pointer;
+    font-weight: bolder;
+
+
+    &:hover{
+        cursor:pointer;
+        transform: scale(1.15);
+    }
+}
+
+.button-hover-disabled{
+    background-color: #8d8c8a;
+    height: 43px;
+    width: 43px;
+    text-align: center;
+    display: block;
+    padding: 4px 4px; /* Add padding for better touch interaction on mobile */
+    font-size: 17px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    transition: all 220ms ease-in-out;
+    cursor: pointer;
+    font-weight: bolder;
+    opacity: 0.6;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.history-search{
+    height: 40px;
+    border: 2px solid rgb(226, 199, 199);
+    border-radius: 5px;
+    transition: all 220ms ease-in-out;
+}
+
+.input-group {
+    display: flex;
+  }
+  
+  .input-group-item {
+    flex: 1;
+    margin-right: 40px; /* Adjust margin as needed */
+  }
+
+.label-style {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  
+  .input-style{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3 ease;
+
+    &:hover{
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);;
+    }
+
+    &:focus{
+        border-color: rgba(207, 181, 181, 0.3);
+        outline: none;
+    }
+  }
+  

@@ -5,6 +5,7 @@ import './Delete.css';
 
 const Delete = () => {
     const [consumerNumber, setConsumerNumber] = useState('');
+    const [responseMessage, setResponseMessage] = useState('')
 
     const handleKeyDown = (event) => {
         // Check if the pressed key is space
@@ -28,19 +29,31 @@ const Delete = () => {
             const accessToken = localStorage.getItem('access_token')
             const user = localStorage.getItem('user')
 
-            //HERE WILL BE THE API CALL TO DELETE A CONSUMER'S DATA
-            console.log("consumer number", consumerNumber)
-            console.log("user",user)
-
             const response = await fetch(`${backend_url}user/delete_pdf/?consumer_number=${consumerNumber}&user=${user}`, {
               method: 'GET',
               headers:{
                 'Authorization': `Bearer ${accessToken}`,
               }
-            });
-            console.log('response', response);
+            })
+            .then(response => response.json())
+            .then(data => setResponseMessage(data.message))
             
-             setConsumerNumber('');
+
+            if (responseMessage === 'Object deleted Successfully'){
+                console.log(responseMessage);
+                alert('Consumer deleted successfully')
+            } else if(responseMessage === 'consumer number is not present'){
+                console.log(responseMessage);
+                alert('Consumer does not exist')
+            } else if(responseMessage === ''){
+                console.log(responseMessage);
+                alert('Consumer does not exist')
+            } else{
+                console.log(responseMessage);
+                alert('Error in deleting the consumer')
+            }
+            
+            setConsumerNumber('');
           } catch (error) {
             // Handle errors
             console.error('Error deleting PDF:', error);
